@@ -2,7 +2,7 @@ import { useReactToPrint } from "react-to-print";
 
 const DownloadPDF = ({ contentRef }) => {
     const handlePrint = useReactToPrint({
-        content: () => contentRef.current,
+         contentRef
     });
 
     return (
