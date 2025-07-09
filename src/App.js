@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import ResumeForm from "./components/resumeForm";
+import PreviewPage from "./components/previewPage";
+import Navbar from "./components/navBar";
+import AtsChecker from "./components/atsChecker";
+//import Templates from "./components/Templates";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <div className="p-4 bg-gray-100 min-h-screen">
+        <Routes>
+          <Route path="/" element={<Navigate to="/form" />} />
+          <Route path="/form" element={<ResumeForm />} />
+          <Route path="/ats-checker" element={<AtsChecker />} />
+          <Route path="/preview" element={<PreviewPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
