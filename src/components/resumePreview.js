@@ -9,7 +9,7 @@ const ResumePreview = React.forwardRef((_, ref) => {
     const { personal, skills, experience, education } = resumeData;
 
     return (
-        <div ref={ref} className="bg-white text-gray-900 px-8 pt-4 pb-1  w-[210mm] mx-auto text-sm font-sans">
+        <div ref={ref} className="bg-white text-gray-900 px-8 pt-4 pb-1 rounded shadow-md w-[210mm] mx-auto text-sm font-sans">
          
             <div className="pb-1 mb-1">
                 <h1 className="text-center text-3xl font-bold uppercase tracking-wide">{personal.name}</h1>
